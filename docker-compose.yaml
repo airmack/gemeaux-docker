@@ -1,0 +1,13 @@
+version: '3'
+services:
+  gemini:
+    build: gemeaux
+    container_name: gemeaux
+    volumes: 
+      - /srv/gemeaux/conf/:/var/capsule/conf/
+      - /srv/gemeaux/bin/:/var/capsule/bin/
+      - /srv/gemeaux/gmi/:/var/capsule/gmi/
+      - /srv/gemeaux/log/:/var/log/gemeaux/
+    ports:
+      - 1965:1965
+
